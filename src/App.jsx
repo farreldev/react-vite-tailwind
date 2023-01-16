@@ -1,10 +1,6 @@
-import {
-    IconBrandFacebook,
-    IconBrandGoogle,
-    IconBrandTwitter,
-} from '@tabler/icons';
+import { IconBrandFacebook, IconBrandGoogle, IconBrandTwitter } from '@tabler/icons';
 
-import { Button } from './components/Button';
+import Button from './components/Button';
 
 export default function App() {
     const type = 'submit';
@@ -19,11 +15,7 @@ export default function App() {
                     Register
                 </Button>
                 {/*----------- End ----------- */}
-                <Button
-                    injectclass={'bg-indigo-600 hover:bg-indigo-700'}
-                    onClick={() => console.log('Register')}
-                    type={'submit'}
-                >
+                <Button injectclass={'bg-indigo-600 hover:bg-indigo-700'} onClick={() => console.log('Register')} type={'submit'}>
                     <IconBrandFacebook />
                     Register
                 </Button>
