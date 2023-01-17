@@ -8,7 +8,7 @@ export default function App() {
     const onClick = () => console.log('Login with another style type...');
 
     return (
-        <div className={'bg-slate-100 antialiased min-h-screen flex items-center justify-center'}>
+        <div className={'bg-slate-100 text-slate-800 tracking-tighter antialiased min-h-screen flex items-center justify-center'}>
             {/* <div className='flex gap-x-2'> */}
             {/*----------- Menggunakan type object ----------- */}
             {/* <Button {...{ type, onClick }}>
