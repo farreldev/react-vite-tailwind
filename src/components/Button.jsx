@@ -1,15 +1,12 @@
 import clsx from 'clsx';
 
-function Button(props) {
-    const { children, text, injectclass = 'bg-blue-600 hover:bg-blue-700', type = 'button' } = props;
+export default function Button({ children, text, customclass = 'bg-black hover:bg-gray-800', type = 'button', ...props }) {
+    // const { children, text, customclass = 'bg-blue-600 hover:bg-blue-700', type = 'button' } = props;
     return (
         <button
             {...props}
-            type={type}
-            className={clsx(injectclass, '[&>svg]:w-5 [&>svg]:h-5 [&>svg]:stroke-1 flex items-center gap-x-2 text-white px-4 py-2 rounded')}>
+            className={clsx(customclass, '[&>svg]:w-5 [&>svg]:h-5 [&>svg]:stroke-2 flex items-center gap-x-2 text-white px-4 py-2 rounded')}>
             {text || children}
         </button>
     );
 }
-
-export default Button;
