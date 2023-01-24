@@ -22,7 +22,7 @@ function Card({ children }) {
 }
 
 function Title({ children, customClass }) {
-    return <div className={`${customClass} p-4 border-b`}>{children}</div>;
+    return <div className={`${customClass} p-4 border-b flex justify-between`}>{children}</div>;
 }
 
 function Body({ children }) {
