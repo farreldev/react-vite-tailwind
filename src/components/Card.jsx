@@ -18,19 +18,19 @@
 import React from 'react';
 
 function Card({ children }) {
-    return <div className={'shadow-xl bg-white rounded-lg overflow-hidden'}>{children}</div>;
+    return <div className={'shadow-xl bg-white dark:bg-slate-700 rounded-lg overflow-hidden'}>{children}</div>;
 }
 
 function Title({ children, customClass }) {
-    return <div className={`${customClass} p-4 border-b flex justify-between`}>{children}</div>;
+    return <div className={`${customClass} p-4 border-b dark:border-b-transparent flex justify-between`}>{children}</div>;
 }
 
 function Body({ children }) {
     return <div className={'leading-relaxed p-4'}>{children}</div>;
 }
 
-function Footer({ children, customClass = 'bg-white' }) {
-    return <div className={`${customClass} p-4 border-t`}>{children}</div>;
+function Footer({ children, customClass = 'bg-white dark:bg-transparent' }) {
+    return <div className={`${customClass} p-4 border-t dark:border-none`}>{children}</div>;
 }
 
 Card.Title = Title;

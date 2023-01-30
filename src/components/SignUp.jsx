@@ -6,6 +6,7 @@ import Input from './Input';
 import Label from './Label';
 import { useContext } from 'react';
 import { FormContext } from '../context/FormContext';
+import ToggleTheme from './ToggleTheme';
 
 export default function SignUp() {
     const context = useContext(FormContext);
@@ -22,15 +23,15 @@ export default function SignUp() {
         <Card>
             <Card.Title customClass={'bg-indigo-600'}>
                 <p className={'text-white text-lg font-medium antialiased tracking-normal'}>Sign up a new account</p>
-                {/* <ToggleTheme /> */}
+                <ToggleTheme />
             </Card.Title>
             <form onSubmit={eventSubmit}>
                 <Card.Body>
-                    <div className={'border rounded-lg space-y-2 mb-4 p-4'}>
-                        <p className='text-slate-500'>
+                    <div className={'border dark:border-slate-500 rounded-lg space-y-2 mb-4 p-4 text-slate-500 dark:text-slate-400'}>
+                        <p>
                             <strong>Name:</strong> {context.form.nama}
                         </p>
-                        <p className='text-slate-500'>
+                        <p>
                             <strong>Email:</strong> {context.form.email}
                         </p>
                     </div>
