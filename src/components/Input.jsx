@@ -1,8 +1,18 @@
 import clsx from 'clsx';
+import { useEffect, useRef } from 'react';
 
-export default function Input({ type = 'text', customClass, ...props }) {
+const Input = ({ isFocused = false, type = 'text', customClass, ...props }) => {
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        if (isFocused) {
+            inputRef.current.focus();
+        }
+    }, []);
+
     return (
         <input
+            ref={inputRef}
             type={type}
             {...props}
             className={clsx(
@@ -10,4 +20,6 @@ export default function Input({ type = 'text', customClass, ...props }) {
             )}
         />
     );
-}
+};
+
+export default Input;
